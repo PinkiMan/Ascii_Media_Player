@@ -2,11 +2,11 @@ __author__ = "Pinkas Matěj"
 __copyright__ = ""
 __credits__ = []
 __license__ = ""
-__version__ = "0.0.1"
+__version__ = "0.0.3"
 __maintainer__ = "Pinkas Matěj"
 __email__ = "pinkas.matej@gmail.com"
 __status__ = "Prototype"
-__date__ = "16/08/2024"
+__date__ = "14/10/2024"
 __created__ = "16/08/2024"
 
 """
@@ -68,7 +68,13 @@ def show(image, size=(317,86)):
 
     ascii_image = draw_border(ascii_image, width, height)
 
+    for _ in range(int((size[1]-height)/2)):
+        print()
+
     print(ascii_image)
+
+    for _ in range(int((size[1]-height)/2)):
+        print()
 
     return height
 
